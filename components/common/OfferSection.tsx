@@ -7,7 +7,7 @@ export default function OfferSection() {
     <section className="max-w-7xl mx-auto my-8 px-4 sm:px-6">
 
       {/* SPECIAL OFFER BANNER */}
-      <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl p-10 sm:p-16 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl min-h-[180px] sm:min-h-[220px]">
+      <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-xl p-10 sm:p-16 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xl min-h-[200px] sm:min-h-[300px]">
         
         {/* TEXT */}
         <div className="flex items-center gap-5 sm:gap-8">
