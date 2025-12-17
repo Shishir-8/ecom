@@ -1,13 +1,15 @@
 import Pagination from "@/components/common/Pagination";
-import CategoryFilter from "@/components/product/CategoryFilter";
-import ProductGrid from "@/components/product/ProductGrid";
+import CategoryFilter from "@/app/products/components/CategoryFilter";
+import ProductGrid from "@/app/products/components/ProductGrid";
 
 
-export default function ProductsPage() {
+export  default async function ProductsPage() {
+
+
   return (
-    <section className="container mx-auto px-6 py-6">
+    <section className="container mx-auto py-6">
    
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-[250px_1fr] gap-8">
         {/* Sidebar */}
         <CategoryFilter />
 

@@ -9,7 +9,7 @@ export default function BottomHeader() {
 
   return (
     <header className="w-full bg-white border-t border-gray-100">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
+      <div className="container mx-auto px-2 py-4">
         <div className="flex items-center justify-between">
 
           {/* LEFT SIDE */}
