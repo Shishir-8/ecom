@@ -15,29 +15,24 @@ export default function HeroSection() {
 
   return (
     <section className="w-full bg-gradient-to-r from-purple-200 via-blue-100 to-pink-100">
-      <div className="max-w-7xl mx-auto px-6 py-20">
+      <div className="container mx-auto px-4 py-20">
 
         {/* GRID CONTAINER */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
 
           {/* LEFT CONTENT */}
           <div className="space-y-6">
 
             {/* Badge */}
-            <span className="inline-block bg-yellow-300 text-yellow-900 px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide shadow-sm">
+            <span className="inline-block bg-yellow-400 text-yellow-900 px-4 py-1.5 rounded-full text-xs font-semibold tracking-tight shadow-sm">
               Free Shipping • Orders over $100
             </span>
 
             {/* Heading */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900">
-              Limited Time <br />
-              Offer{" "}
-              <span className="text-purple-600 block text-5xl lg:text-7xl">
-                Up To
-              </span>
-              <span className="text-pink-600 block text-5xl lg:text-7xl">
-                50% OFF
-              </span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight text-gray-900">
+              Limited Time <br /> Offer!{" "}
+              <span className="text-purple-600 text-8xl"><i>Up To</i> <br /></span>{" "}
+              <span className="text-pink-600 text-8xl"><i>50% OFF</i></span>
             </h1>
 
             {/* Description */}

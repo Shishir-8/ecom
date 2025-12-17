@@ -11,11 +11,11 @@ export default async function MostPopular() {
 
       <div className="text-center mb-12">
         <h2 className="relative inline-block mb-3 text-3xl md:text-4xl font-bold text-gray-900 tracking-tight">
-          Most Popular
+          New Arrivals
         </h2>
 
         <p className="text-muted-foreground text-sm text-gray-600 md:text-base">
-          Discover the most loved items this week
+          Discover the latest most new arrivals
         </p>
       </div>
 
@@ -28,7 +28,7 @@ export default async function MostPopular() {
       </div>
 
       <div className="flex mt-10 items-center justify-center">
-        <button className="px-8 flex items-center gap-2 py-4 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-purple-600 transition transform hover:-translate-y-1 hover:shadow-lg">
+        <button className="px-8 flex items-center gap-2 py-4 border border-2 border-violet-600  rounded shadow-md hover:bg-purple-600 hover:text-white transition transform hover:-translate-y-1 hover:shadow-lg">
           Explore More <span><MoveRight /></span>
         </button>
       </div>

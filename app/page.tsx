@@ -4,7 +4,7 @@ import Footer from '@/components/common/Footer'
 import WhyChooseUs from '@/components/common/WhyChooseUs'
 import HeroSection from '@/components/home/HeroSection'
 import CategorySection from '@/components/product/CategorySection'
-import MostPopular from '@/components/product/MostPopular'
+import MostPopular from '@/components/product/NewArrivals'
 import OfferSection from '@/components/common/OfferSection'
 
 export default function Home() {
