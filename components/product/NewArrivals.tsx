@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import ProductCard from '../../app/products/components/ProductCard';
 import { MoveRight } from 'lucide-react';
+import Link from 'next/link';
 
 export default function MostPopular() {
   const [products, setProducts] = useState<any[]>([]);
@@ -36,7 +37,7 @@ export default function MostPopular() {
         </p>
       </div>
 
-      <div className="container mx-auto px-2 mt-4">
+      <div className="max-w-6xl mx-auto px-2 mt-4">
         {loading ? (
           <div className="text-center py-20 text-gray-500">Loading products...</div>
         ) : (
@@ -49,9 +50,9 @@ export default function MostPopular() {
       </div>
 
       <div className="flex mt-10 items-center justify-center">
-        <button className="px-8 flex items-center gap-2 py-4 border border-2 border-violet-600 rounded shadow-md hover:bg-purple-600 hover:text-white transition transform hover:-translate-y-1 hover:shadow-lg">
+        <Link href="/products" className="px-8 flex items-center gap-2 py-4 border border-2 border-violet-600 rounded shadow-md hover:bg-purple-600 hover:text-white transition transform hover:-translate-y-1 hover:shadow-lg">
           Explore More <MoveRight />
-        </button>
+        </Link>
       </div>
     </div>
   );

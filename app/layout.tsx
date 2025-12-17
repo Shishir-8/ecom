@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import {Poppins} from "next/font/google"
+import { Poppins } from "next/font/google"
 import "./globals.css";
 import Header from "@/components/header/Header";
+import { Toaster } from "react-hot-toast";
+import Provider from "@/redux/provider";
+import EcommerceFooter from "@/components/common/Footer";
 
 const poppins = Poppins({
   weight: ["300", "400", "500", "600"],
@@ -26,8 +29,12 @@ export default function RootLayout({
       <body
         className={`${poppins.variable} bg-gray-100`}
       >
-        <Header />
-        {children}
+        <Provider>
+          <Header />
+          {children}
+          <Toaster position="top-center" />
+          <EcommerceFooter />
+        </Provider>
       </body>
     </html>
   );

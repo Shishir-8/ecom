@@ -1,11 +1,22 @@
+"use client"
+
+import { useAppDispatch } from '@/redux/hooks';
+import { addItem } from '@/redux/slice/cartSlice';
 import { Product } from '@/types/product';
 import React from 'react';
+import toast from 'react-hot-toast';
 
 interface ProductCardProps {
   product: Product;
 }
 
 export default function ProductCard({ product }: ProductCardProps) {
+  const dispatch = useAppDispatch()
+
+  const handleAddToCart = () => {
+      dispatch(addItem({...product, quantity: 1}))
+      toast.success("Product added to cart")
+  }
   return (
     <div className="w-full max-w-sm  bg-white border border-gray-200 rounded-lg shadow-sm flex flex-col overflow-hidden p-2">
       
@@ -39,7 +50,9 @@ export default function ProductCard({ product }: ProductCardProps) {
             ${product.price}
           </span>
 
-          <button className="mt-4 w-full bg-gray-900 text-white text-gray-900 py-3 text-sm font-medium rounded-lg hover:bg-gray-900 hover:text-white transition">
+          <button
+          onClick={handleAddToCart}
+          className="mt-4 w-full bg-gray-900 cursor-pointer text-white text-gray-900 py-3 text-sm font-medium rounded-lg hover:bg-gray-900 hover:text-white transition">
             Add to Cart
           </button>
         </div>

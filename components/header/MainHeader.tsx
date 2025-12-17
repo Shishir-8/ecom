@@ -2,8 +2,12 @@
 
 import { ShoppingCart, User, Search } from "lucide-react";
 import Link from "next/link";
+import SearchBar from "../common/SearchBar";
+import { useAppSelector } from "@/redux/hooks";
 
 export default function MainHeader() {
+  const {items} = useAppSelector((state) => state.cart)
+  const count = items.length
   return (
     <header className="w-full bg-gray-100 shadow-sm">
       <div className="container mx-auto px-2 py-5">
@@ -19,15 +23,8 @@ export default function MainHeader() {
 
           {/* SEARCH BAR (Desktop Only) */}
           <div className="hidden lg:flex items-center flex-1 max-w-xl mx-auto bg-white rounded-md border border-gray-200 shadow-sm overflow-hidden">
-            <input
-              type="text"
-              placeholder="Search for products..."
-              className="flex-1 px-4 py-2.5 text-base outline-none"
-            />
-            <button className="px-4 py-2.5 bg-gray-100 hover:bg-gray-200 border-l border-gray-300 transition">
-              <Search size={20} />
-            </button>
-          </div>
+            <SearchBar />
+        </div>
         </div>
 
         {/* RIGHT ICONS */}
@@ -39,12 +36,12 @@ export default function MainHeader() {
           </button>
 
           {/* CART */}
-          <button className="relative w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center text-gray-600 hover:text-purple-600 transition">
+          <Link href={"/cart"} className="relative w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-full flex items-center justify-center text-gray-600 hover:text-purple-600 transition">
             <ShoppingCart size={22} />
             <span className="absolute -top-1 -right-2 text-[10px] bg-purple-600 text-white px-1.5 rounded-full">
-              3
+              {count}
             </span>
-          </button>
+          </Link>
 
           {/* USER */}
           <button className="text-gray-600 hover:text-purple-600 transition">

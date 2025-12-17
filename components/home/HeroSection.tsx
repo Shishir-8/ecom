@@ -31,8 +31,8 @@ export default function HeroSection() {
             {/* Heading */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight text-gray-900">
               Limited Time <br /> Offer!{" "}
-              <span className="text-purple-600 text-8xl"><i>Up To</i> <br /></span>{" "}
-              <span className="text-pink-600 text-8xl"><i>50% OFF</i></span>
+              <span className="text-purple-600 text-8xl">Up To <br /></span>{" "}
+              <span className="text-pink-600 text-8xl">50% OFF</span>
             </h1>
 
             {/* Description */}
