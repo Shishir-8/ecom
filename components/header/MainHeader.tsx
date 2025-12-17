@@ -8,17 +8,18 @@ export default function MainHeader() {
     <header className="w-full bg-gray-100 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4">
         
-        <div className="grid grid-cols-[auto_1fr_auto] items-center gap-4">
+        <div className="flex items-center justify-between gap-4">
 
-          {/* LOGO */}
-          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-purple-700">
+        <div className="flex items-center gap-4 max-w-3xl w-full">
+            {/* LOGO */}
+          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-purple-700 shrink-0">
             <Link href="/">
               Robo<span className="text-pink-600">Tech</span>
             </Link>
           </h1>
 
           {/* SEARCH BAR (Desktop Only) */}
-          <div className="hidden lg:flex items-center max-w-xl mx-auto w-full bg-white rounded-md border border-gray-200 shadow-sm overflow-hidden">
+          <div className="hidden lg:flex items-center flex-1 max-w-xl mx-auto bg-white rounded-md border border-gray-200 shadow-sm overflow-hidden">
             <input
               type="text"
               placeholder="Search for products..."
@@ -28,10 +29,11 @@ export default function MainHeader() {
               <Search size={20} />
             </button>
           </div>
+        </div>
 
           {/* RIGHT ICONS */}
-          <div className="flex items-center gap-4 sm:gap-6 justify-end">
-            
+          <div className="flex items-center gap-4 sm:gap-6 ml-auto">
+
             {/* SEARCH ICON (Mobile / Tablet) */}
             <button className="lg:hidden text-gray-600 hover:text-purple-600 transition">
               <Search size={24} />

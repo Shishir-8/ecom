@@ -17,14 +17,20 @@ export default function MostPopular() {
         </p>
       </div>
 
-      <div className='container mx-auto'>
-        <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 place-items-center">
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
+          <ProductCard />
           <ProductCard />
           <ProductCard />
           <ProductCard />
           <ProductCard />
         </div>
       </div>
+
+
       <div className="flex mt-10 items-center justify-center">
         <button className="px-8 flex items-center gap-2 py-4 bg-violet-500 text-white font-semibold rounded-full shadow-md hover:bg-purple-600 transition transform hover:-translate-y-1 hover:shadow-lg">
           Explore More <span><MoveRight /></span>

@@ -5,12 +5,13 @@ import WhyChooseUs from '@/components/common/WhyChooseUs'
 import HeroSection from '@/components/home/HeroSection'
 import CategorySection from '@/components/product/CategorySection'
 import MostPopular from '@/components/product/MostPopular'
-import React from 'react'
+import OfferSection from '@/components/common/OfferSection'
 
 export default function Home() {
   return (
     <>
     <HeroSection />
+    <OfferSection />
     <CategorySection />
     <MostPopular />
     <WhyChooseUs />
