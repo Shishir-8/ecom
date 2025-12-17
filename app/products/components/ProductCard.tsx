@@ -7,7 +7,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ product }: ProductCardProps) {
   return (
-    <div className="w-full max-w-sm  bg-white border border-gray-200 rounded-2xl shadow-sm flex flex-col overflow-hidden">
+    <div className="w-full max-w-sm  bg-white border border-gray-200 rounded-lg shadow-sm flex flex-col overflow-hidden">
       
       {/* IMAGE (fixed height) */}
       <div className="h-52 w-full bg-gray-50 flex-shrink-0">
