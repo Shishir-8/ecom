@@ -3,6 +3,7 @@
 import { useAppDispatch } from '@/redux/hooks';
 import { addItem } from '@/redux/slice/cartSlice';
 import { Product } from '@/types/product';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import toast from 'react-hot-toast';
@@ -23,9 +24,11 @@ export default function ProductCard({ product }: ProductCardProps) {
       
       <Link href={`products/${product.id}`}>
       <div className="h-48 w-full bg-gray-50 flex-shrink-0">
-        <img
+        <Image
           src={product.image}
+          alt={product.name}
           className="h-full w-full object-cover "
+          fill
         />
       </div>
       </Link>

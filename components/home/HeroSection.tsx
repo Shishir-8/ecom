@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export default function HeroSection() {
@@ -31,7 +32,7 @@ export default function HeroSection() {
             {/* Heading */}
             <h1 className="font-semibold leading-tight text-gray-900
               text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-              Hungry? <br /> Treat Yourself!{" "}
+              Hungry? Treat Yourself!{" "}
               <span className="block text-purple-600
                 text-4xl sm:text-5xl  lg:text-7xl">
                 Delicious
@@ -59,7 +60,7 @@ export default function HeroSection() {
           {/* RIGHT IMAGE */}
           <div className="flex justify-center">
             <div className="w-full max-w-md h-[260px] sm:h-[320px] md:h-[500px] flex items-center justify-center overflow-hidden">
-              <img
+              <Image
                 key={index}
                 src={images[index]}
                 alt="Food showcase"
