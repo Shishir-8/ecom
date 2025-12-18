@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 export default function HeroSection() {
-  const images = ["/iphone1.png", "/headphone.png", "/laptop1.png"];
+  const images = ["/kfc.png", "/momo.png", "/panipuri.png"]; // food images
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -24,36 +24,45 @@ export default function HeroSection() {
           <div className="space-y-6">
 
             {/* Badge */}
-            <span className="inline-block bg-yellow-400 text-yellow-900 px-4 py-1.5 rounded-full text-xs font-semibold tracking-tight shadow-sm">
-              Free Shipping • Orders over $100
+            <span className="inline-block bg-yellow-400 text-yellow-900 px-4 py-1.5 rounded-full text-[10px] sm:text-xs font-semibold tracking-tight shadow-sm">
+              Free Delivery • Orders over $20
             </span>
 
             {/* Heading */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight text-gray-900">
-              Limited Time <br /> Offer!{" "}
-              <span className="text-purple-600 text-8xl">Up To <br /></span>{" "}
-              <span className="text-pink-600 text-8xl">50% OFF</span>
+            <h1 className="font-semibold leading-tight text-gray-900
+              text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
+              Hungry? <br /> Treat Yourself!{" "}
+              <span className="block text-purple-600
+                text-4xl sm:text-5xl  lg:text-7xl">
+                Delicious
+              </span>
+              <span className="block text-pink-600
+                text-4xl sm:text-5xl lg:text-7xl">
+                Meals Await
+              </span>
             </h1>
 
             {/* Description */}
-            <p className="text-gray-600 text-base sm:text-lg max-w-xl">
-              Discover premium electronics with exclusive discounts.
-              Shop smart, shop fast — elevate your lifestyle today.
+            <p className="text-gray-600 max-w-xl
+              text-sm sm:text-base md:text-lg">
+              Order your favorite dishes from our menu. Freshly prepared, hot, and delivered fast to your doorstep!
             </p>
 
             {/* CTA */}
-            <button className="px-8 py-3 text-sm font-medium outline outline-purple-500 rounded-lg shadow-md hover:bg-purple-500 hover:text-white transition-all">
-              Explore Store
+            <button className="px-8 py-3 rounded-lg shadow-md transition-all
+              text-xs sm:text-sm font-medium outline outline-purple-500
+              hover:bg-purple-500 hover:text-white">
+              Explore Menu
             </button>
           </div>
 
           {/* RIGHT IMAGE */}
           <div className="flex justify-center">
-            <div className="w-full max-w-md h-[320px] sm:h-[380px] flex items-center justify-center overflow-hidden">
+            <div className="w-full max-w-md h-[260px] sm:h-[320px] md:h-[500px] flex items-center justify-center overflow-hidden">
               <img
                 key={index}
                 src={images[index]}
-                alt="Product showcase"
+                alt="Food showcase"
                 className="max-h-full max-w-full object-contain transition-opacity duration-700"
               />
             </div>

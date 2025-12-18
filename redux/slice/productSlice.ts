@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { p } from "framer-motion/client";
 
 // Product type
 export interface Product {

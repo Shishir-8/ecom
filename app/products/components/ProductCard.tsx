@@ -3,6 +3,7 @@
 import { useAppDispatch } from '@/redux/hooks';
 import { addItem } from '@/redux/slice/cartSlice';
 import { Product } from '@/types/product';
+import Link from 'next/link';
 import React from 'react';
 import toast from 'react-hot-toast';
 
@@ -20,14 +21,14 @@ export default function ProductCard({ product }: ProductCardProps) {
   return (
     <div className="w-full max-w-sm  bg-white border border-gray-200 rounded-lg shadow-sm flex flex-col overflow-hidden p-2">
       
-      {/* IMAGE (fixed height) */}
+      <Link href={`products/${product.id}`}>
       <div className="h-48 w-full bg-gray-50 flex-shrink-0">
         <img
           src={product.image}
-          alt={product.title}
-          className="h-full w-full object-contain "
+          className="h-full w-full object-cover "
         />
       </div>
+      </Link>
 
       {/* CONTENT */}
       <div className="flex flex-col flex-1 px-4 py-3">
@@ -35,7 +36,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         {/* Text Section (does NOT grow) */}
         <div className="space-y-2 mb-2">
           <h3 className="text-base font-semibold text-gray-900 truncate">
-            {product.title}
+            {product?.name}
           </h3>
 
           {/* ONE LINE ONLY */}
@@ -47,7 +48,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         {/* Push price + button to bottom */}
         <div className="">
           <span className="block text-lg font-medium text-gray-900">
-            ${product.price}
+            ${product?.caloriesPerServing}
           </span>
 
           <button

@@ -1,15 +1,21 @@
-export default function CategoryCard() {
+import { Category } from "./CategorySection";
+
+interface CategoryCardProps {
+  category: Category
+}
+
+export default function CategoryCard({ category }: CategoryCardProps) {
   return (
     <div className="bg-white w-full rounded-xl shadow-md p-6 flex items-center justify-between relative overflow-hidden">
 
       {/* LEFT CONTENT */}
       <div className="space-y-4 w-1/2">
         <h2 className="text-3xl font-bold text-gray-900 leading-snug">
-          Shoes Collection!
+          {category.title}
         </h2>
 
         <p className="text-lg font-medium text-gray-600">
-          Launch Offer 15% Off!
+          {category.offer}
         </p>
 
         <button className="px-5 py-2.5 bg-indigo-600 text-white rounded-lg text-sm font-medium shadow hover:bg-indigo-700 transition">
@@ -29,11 +35,10 @@ export default function CategoryCard() {
 
         {/* IMAGE */}
         <img
-          src="/iphone1.png"
-          alt="Category"
+          src={category.image}
+          alt={category.title}
           className="relative h-36 object-contain rotate-[-10deg] drop-shadow-md"
         />
-
       </div>
     </div>
   );

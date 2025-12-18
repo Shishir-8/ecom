@@ -7,17 +7,20 @@ import { setProducts } from "@/redux/slice/productSlice";
 
 export default function ProductGrid() {
   const [loading, setLoading] = useState(true);
-  const storedProducts = useAppSelector((state) => state.product.items)
-  const dispatch = useAppDispatch()
+
+  const dispatch = useAppDispatch();
+
+  const storedProducts = useAppSelector((state) => state.product.items);
+  const searchQuery = useAppSelector((state) => state.filter.query); // 👈 SEARCH
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch("https://fakestoreapi.com/products");
+        const res = await fetch("https://dummyjson.com/recipes");
         if (!res.ok) throw new Error("Failed to fetch products");
         const data = await res.json();
-        dispatch(setProducts(data))
-        
+        console.log(data)
+        dispatch(setProducts(data.recipes));
       } catch (error) {
         console.error("Error fetching products:", error);
       } finally {
@@ -26,10 +29,23 @@ export default function ProductGrid() {
     };
 
     fetchProducts();
-  }, []);
+  }, [dispatch]);
+
 
   if (loading) {
-    return <div className="text-center py-10 text-gray-500">Loading products...</div>;
+    return (
+      <div className="text-center py-10 text-gray-500">
+        Loading products...
+      </div>
+    );
+  }
+
+  if (!storedProducts.length) {
+    return (
+      <div className="text-center py-10 text-gray-500">
+        No products found
+      </div>
+    );
   }
 
   return (

@@ -67,8 +67,7 @@ export default function CartPage() {
                     {/* Cart Items */}
                     <div className="flex-1 space-y-6">
                         {cartItems.map((item) => (
-                            <div
-                                key={item.id}
+                            <div key={item.id}
                                 className="bg-white rounded-2xl p-5 flex flex-col sm:flex-row items-center sm:items-start justify-between gap-4 border border-gray-200 hover:shadow-lg transition"
                             >
                                 {/* Product Image */}
@@ -84,7 +83,7 @@ export default function CartPage() {
                                 <div className="flex-1 flex flex-col sm:flex-row sm:justify-between sm:items-center w-full gap-4">
                                     <div>
                                         <h2 className="font-semibold text-gray-900">{item.title}</h2>
-                                        <p className="text-gray-600 mt-1 text-sm">Unit Price: ${item.price.toFixed(2)}</p>
+                                        <p className="text-gray-600 mt-1 text-sm">Unit Price: ${item.price?.toFixed(2)}</p>
                                     </div>
 
                                     {/* Quantity + Total + Remove */}

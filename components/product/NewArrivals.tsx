@@ -12,9 +12,9 @@ export default function MostPopular() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("https://fakestoreapi.com/products?limit=8");
+        const response = await fetch("https://dummyjson.com/recipes");
         const data = await response.json();
-        setProducts(data);
+        setProducts(data.recipes);
       } catch (err) {
         console.error("Failed to fetch products:", err);
       } finally {
@@ -42,7 +42,7 @@ export default function MostPopular() {
           <div className="text-center py-20 text-gray-500">Loading products...</div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 place-items-center">
-            {products.map((product) => (
+            {products.slice(0, 8).map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>

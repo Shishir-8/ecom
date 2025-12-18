@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 
 export default function CategoryFilter() {
-  const categories = ["Electronics", "Clothing", "Shoes", "Accessories"];
+  const categories = ["Pizza", "Momo", "Burgers", "Pasta", "Drinks", "Desserts"];
   const [priceRange, setPriceRange] = useState([0, 500]); // example min-max
 
   const handlePriceChange = (e: React.ChangeEvent<HTMLInputElement>, index: number) => {
@@ -72,7 +72,6 @@ export default function CategoryFilter() {
             />
           </div>
         </div>
-
       </div>
     </aside>
   );
