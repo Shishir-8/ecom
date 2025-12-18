@@ -24,11 +24,11 @@ export default function ProductCard({ product }: ProductCardProps) {
       
       <Link href={`products/${product.id}`}>
       <div className="h-48 w-full bg-gray-50 flex-shrink-0">
-        <Image
+        <img
           src={product.image}
           alt={product.name}
           className="h-full w-full object-cover "
-          fill
+      
         />
       </div>
       </Link>

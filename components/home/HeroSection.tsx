@@ -60,7 +60,7 @@ export default function HeroSection() {
           {/* RIGHT IMAGE */}
           <div className="flex justify-center">
             <div className="w-full max-w-md h-[260px] sm:h-[320px] md:h-[500px] flex items-center justify-center overflow-hidden">
-              <Image
+              <img
                 key={index}
                 src={images[index]}
                 alt="Food showcase"
