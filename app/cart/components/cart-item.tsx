@@ -9,12 +9,12 @@ import { toast } from "react-hot-toast";
 interface CartItemProps {
   item: {
     id: number;
-    title: string;
+    name: string;
     price: number;
     image: string;
     quantity: number;
-    caloriesPerServing?:number
-    [key: string]: any
+    caloriesPerServing:number
+
   };
 }
 
@@ -37,7 +37,7 @@ export default function CartItem({ item }: CartItemProps) {
       <div className="flex-shrink-0">
         <img
           src={item.image}
-          alt={item.title}
+          alt={item.name}
           className="w-28 h-28 sm:w-32 sm:h-32 object-contain rounded-xl border border-gray-100"
         />
       </div>
@@ -46,7 +46,7 @@ export default function CartItem({ item }: CartItemProps) {
       <div className="flex-1 flex flex-col sm:flex-row sm:justify-between items-start gap-4 w-full">
         <div className="flex-1">
           <h2 className="text-lg sm:text-xl font-semibold text-gray-900 line-clamp-2">
-            {item.title}
+            {item.name}
           </h2>
           <p className="text-purple-600 font-bold mt-1 text-lg">${item.price.toFixed(2)}</p>
         </div>

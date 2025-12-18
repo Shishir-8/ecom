@@ -74,7 +74,7 @@ export default function CartPage() {
                                 <div className="w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center overflow-hidden rounded-xl bg-gray-100">
                                     <img
                                         src={item.image} // assuming item.image is the URL
-                                        alt={item.title}
+                                        alt={item.name}
                                         className="object-cover w-full h-full"
                                     />
                                 </div>
@@ -82,7 +82,7 @@ export default function CartPage() {
                                 {/* Product Info */}
                                 <div className="flex-1 flex flex-col sm:flex-row sm:justify-between sm:items-center w-full gap-4">
                                     <div>
-                                        <h2 className="font-semibold text-gray-900">{item.title}</h2>
+                                        <h2 className="font-semibold text-gray-900">{item.name}</h2>
                                         <p className="text-gray-600 mt-1 text-sm">Unit Price: ${item.price?.toFixed(2)}</p>
                                     </div>
 
@@ -153,7 +153,7 @@ export default function CartPage() {
                 <div className="mt-12">
                     <h2 className="text-3xl font-semibold text-gray-900 mb-6">You may also like</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 place-items-center">
-                        {storeProducts.slice(0, 4).map((product) => (
+                        {storeProducts.slice(0, 4).map((product: any) => (
                            <ProductCard  key={product.id} product={product}/>
                         ))}
                     </div>
