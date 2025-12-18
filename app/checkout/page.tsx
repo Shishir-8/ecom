@@ -61,11 +61,11 @@ export default function CheckoutPage() {
               <div key={item.id} className="flex flex-col sm:flex-row  rounded-lg p-2 sm:p-4">
                 <img
                   src={item.image}
-                  alt={item.title}
+                  alt={item.name}
                   className="h-24 w-28 rounded-md object-contain"
                 />
                 <div className="flex flex-col justify-between flex-1 px-4 py-2">
-                  <span className="font-semibold">{item.title}</span>
+                  <span className="font-semibold">{item.name}</span>
               
                   <p className="text-lg font-bold">${(item.price * item.quantity).toFixed(2)}</p>
                 </div>
