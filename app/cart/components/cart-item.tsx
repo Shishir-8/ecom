@@ -13,6 +13,8 @@ interface CartItemProps {
     price: number;
     image: string;
     quantity: number;
+    caloriesPerServing?:number
+    [key: string]: any
   };
 }
 
